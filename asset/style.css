@@ -73,10 +73,18 @@ body {
     color: var(--text-color);
 }
 
-.fi-br-plus,
+.fi-br-plus{
+    color: var(--text-color);
+    font-size: 36px;
+
+}
 .fi-br-cross {
     color: var(--text-color);
+    font-size: 18px;
+    
 }
+
+
 
 button {
     border: none;
@@ -145,7 +153,8 @@ a {
 
 .theme-switcher {
     position: absolute;
-    bottom: 50px;
+    top:auto;
+   
     right: 20px;
 }
 
