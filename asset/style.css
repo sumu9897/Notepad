@@ -1,0 +1,154 @@
+body {
+    font-family: Gotham, Arial, sans-serif;
+    margin: 50px;
+    background: var(--background-color);
+    color: var(--text-color);
+}
+
+:root {
+    --background-color: #151515;
+    --text-color: white;
+    --note-background: #282828;
+    --input-background: #191919;
+    --hover-color: #a9a9a9;
+}
+
+[data-theme='light'] {
+    --background-color: white;
+    --text-color: black;
+    --note-background: #f5f5f5;
+    --input-background: #e0e0e0;
+    --hover-color: #d3d3d3;
+}
+
+.note-input,
+.note-edit {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 30px -10px #000;
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    visibility: hidden;
+    background: var(--note-background);
+    z-index: 1000;
+    display: block;
+}
+
+.note-input input,
+.note-edit input,
+.body,
+.bodyEdit {
+    width: calc(100% - 20px);
+    background: var(--input-background);
+    color: var(--text-color);
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    margin: 10px 0;
+}
+
+.body,
+.bodyEdit {
+    height: 300px;
+    resize: vertical;
+    vertical-align: top;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+.credit {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: 11px;
+    text-align: right;
+}
+
+.credit a {
+    margin: 0 5px;
+    color: var(--text-color);
+}
+
+.fi-br-plus,
+.fi-br-cross {
+    color: var(--text-color);
+}
+
+button {
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    transition-duration: 0.2s;
+    cursor: pointer;
+    margin: 0 5px;
+    background: var(--input-background);
+}
+
+button:hover {
+    background: var(--hover-color);
+}
+
+.newNote {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: none;
+}
+
+.newNote:hover {
+    background: none;
+}
+
+.notes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.note {
+    margin-top: 30px;
+    margin-left: 30px;
+    background: var(--note-background);
+    padding: 30px;
+    border-radius: 10px;
+    width: 250px;
+    max-height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.note h3,
+.note p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+a {
+    color: var(--text-color);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.report {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+}
+
+.theme-switcher {
+    position: absolute;
+    bottom: 50px;
+    right: 20px;
+}
+
+input, textarea, button {
+    font-family: Gotham, Arial, sans-serif;
+}
